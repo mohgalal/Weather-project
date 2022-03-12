@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txt_time_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="38dp"
+            android:text="2"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_time_am"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="20dp"
+            android:text="AM"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txt_time_number"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_ic_cloudy"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/cloudy"
+            app:layout_constraintEnd_toEndOf="@id/txt_time_am"
+            app:layout_constraintStart_toStartOf="@id/txt_time_number"
+            app:layout_constraintTop_toBottomOf="@id/txt_time_am" />
+
+
+        <TextView
+            android:id="@+id/txt_temp_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="6"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="38dp"
+            app:layout_constraintStart_toStartOf="@id/iv_ic_cloudy"
+            app:layout_constraintTop_toBottomOf="@id/iv_ic_cloudy" />
+
+        <TextView
+            android:id="@+id/txt_degree_sign"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txt_temp_number"
+            app:layout_constraintStart_toEndOf="@id/txt_temp_number"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/txt_temp_number"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="2dp"
+            android:text="@string/weather_sign" />
+
+        <TextView
+            android:id="@+id/txt_temp_sign"
+            android:layout_width="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/txt_degree_sign"
+            app:layout_constraintStart_toEndOf="@id/txt_degree_sign"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/txt_degree_sign"
+            android:layout_marginStart="2dp"
+            android:text="C" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
